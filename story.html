@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading Story...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Desi sex stories in Hindi">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff4ee;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: maroon;
+    }
+    .meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .back {
+      margin-top: 30px;
+      display: block;
+      color: #800000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Loading...</h1>
+  <div class="meta" id="meta"></div>
+  <div id="content"></div>
+  <a href="index.html" class="back">← Back to Home</a>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const storyId = parseInt(urlParams.get('id'));
+
+    fetch('stories.json')
+      .then(res => res.json())
+      .then(data => {
+        const story = data.find(s => s.id === storyId);
+        if (story) {
+          document.title = story.title + " | My Desi Secret";
+          document.getElementById('title').textContent = story.title;
+          document.getElementById('meta').innerHTML = `✍️ <b>${story.author || "anonymous"}</b> | 🏷️ ${story.category} | 📅 ${story.date}`;
+          document.getElementById('content').innerHTML = `<p>${story.content.replace(/\n/g, '</p><p>')}</p>`;
+        } else {
+          document.getElementById('title').textContent = "Story Not Found";
+          document.getElementById('content').innerHTML = "<p>Oops! The story you're looking for doesn't exist.</p>";
+        }
+      })
+      .catch(() => {
+        document.getElementById('title').textContent = "Error Loading Story";
+        document.getElementById('content').innerHTML = "<p>Could not load the story file.</p>";
+      });
+  </script>
+</body>
+</html>
