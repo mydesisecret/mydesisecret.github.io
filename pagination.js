@@ -6,7 +6,7 @@
   // Fetch and initialize on load
   async function fetchStories() {
     try {
-      const response = await fetch('stories.json');
+      const response = await fetch('stories1.json');
       stories = await response.json();
       displayStories();
       displayPagination();
