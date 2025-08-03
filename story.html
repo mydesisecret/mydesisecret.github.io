@@ -40,14 +40,14 @@
     const urlParams = new URLSearchParams(window.location.search);
     const storyId = parseInt(urlParams.get('id'));
 
-    fetch('stories.json')
+    fetch('stories1.json')
       .then(res => res.json())
       .then(data => {
         const story = data.find(s => s.id === storyId);
         if (story) {
           document.title = story.title + " | My Desi Secret";
           document.getElementById('title').textContent = story.title;
-          document.getElementById('meta').innerHTML = `✍️ <b>${story.author || "anonymous"}</b> | 🏷️ ${story.category} | 📅 ${story.date}`;
+          document.getElementById('meta').innerHTML = `✍️ <b>${story.author || "anonymous"}</b> | 🏷️ ${story.category || "अनकैटेगराइज्ड"} | 📅 ${story.date || "Unknown Date"}`;
           document.getElementById('content').innerHTML = `<p>${story.content.replace(/\n/g, '</p><p>')}</p>`;
         } else {
           document.getElementById('title').textContent = "Story Not Found";
