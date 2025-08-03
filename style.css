@@ -1,0 +1,122 @@
+body {
+  font-family: sans-serif;
+  background: #fff8f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #ffeedd;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: cursive;
+  color: #b34d00;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #555;
+}
+
+nav {
+  background: #551a0c;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-bar {
+  background: #f4e2d8;
+  padding: 10px;
+  text-align: center;
+}
+
+search-bar input {
+  padding: 5px;
+  width: 60%;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.highlights {
+  background: #fff6e0;
+  margin: 20px;
+}
+
+.highlights li {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.highlights li {
+  background: #221100;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* ✅ STORY TITLE STYLES */
+.story-title a {
+  color: black !important;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.story-title a::before {
+  content: "👁️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ✅ META AND DESCRIPTION TEXT UNDER TITLE */
+.story-meta {
+  font-size: 8px;
+  color: #666;
+  margin: 2px 0 10px 0;
+}
+
+.story-list p {
+  font-size: 8px !important;
+  font-weight: normal !important;
+  color: #444 !important;
+  margin-top: 2px;
+}
+
+/* ✅ FINAL FIX: MAKE ANY TEXT UNDER TITLE SMALL */
+.story-title + * {
+  font-size: 8px !important;
+  font-weight: normal !importa
