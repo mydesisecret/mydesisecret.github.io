@@ -271,7 +271,7 @@
       const div = document.createElement("div");
       const title = document.createElement("h3");
       const link = document.createElement("a");
-      link.href = "story.html?id=" + story.id;
+      link.href = "stories/" + story.id + ".html"; // ✅ Fixed link
       link.textContent = story.title;
       link.target = "_blank";
       title.appendChild(link);
