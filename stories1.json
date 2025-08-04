@@ -1,8 +1,9 @@
 [
   {
-    "title": "मेरी दीदी का प्यार part 1",
-    "description": " पहली बार की कहानी, जब रिश्तों की हदें टूट गईं।",
-    "category": "Brother Sister",
-    "url": "stories/payal.html"
+    "id": "Payal",
+    "title": "पायल की पहली बार",
+    "author": "Sayko",
+    "category": "Romance",
+    "description": "पायल की मासूमियत और राजेश की दीवानगी"
   }
 ]
