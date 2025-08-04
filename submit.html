@@ -59,14 +59,23 @@
       font-size: 14px;
       color: #555;
     }
-  </style>
-  <script>
-    function showThankYouPopupLater() {
-      setTimeout(() => {
-        alert("✅ धन्यवाद! आपकी कहानी सफलतापूर्वक सबमिट हो गई है।");
-      }, 500);
+    .email-submit {
+      text-align: center;
+      margin-top: 30px;
     }
-  </script>
+    .email-submit a {
+      background-color: #ff6600;
+      color: white;
+      padding: 14px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .email-submit a:hover {
+      background-color: #e65100;
+    }
+  </style>
 </head>
 <body>
   <h1>सेक्स स्टोरी सबमिशन</h1>
@@ -81,26 +90,12 @@
     </ul>
   </div>
 
-  <!-- ✅ Final working Form with your Gmail -->
-  <form action="https://formsubmit.co/desitales07@gmail.com" method="POST" onsubmit="showThankYouPopupLater()">
-    <input type="hidden" name="_next" value="https://mydesisecret.github.io/thankyou.html">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="📖 नई कहानी सबमिट हुई है - Desi Fantasy Tales">
-
-    <label for="title">कहानी का शीर्षक *</label>
-    <input type="text" id="title" name="Title" required>
-
-    <label for="author">आपका नाम / उपनाम *</label>
-    <input type="text" id="author" name="Author" required>
-
-    <label for="email">ईमेल (यदि आप चाहें)</label>
-    <input type="email" id="email" name="email">
-
-    <label for="content">अपनी कहानी यहाँ लिखें *</label>
-    <textarea id="content" name="Story" rows="12" required></textarea>
-
-    <button type="submit">📨 सबमिट करें</button>
-  </form>
+  <!-- ✅ Email submission button -->
+  <div class="email-submit">
+    <a href="mailto:desitales07@gmail.com?subject=मेरी%20सेक्स%20कहानी&body=👉%20शीर्षक%20%3A%0A👉%20नाम%20या%20उपनाम%20%3A%0A👉%20कहानी%20%3A%0A%0Aयहाँ%20अपनी%20कहानी%20लिखें..." target="_blank">
+      ✍️ ईमेल से कहानी भेजें
+    </a>
+  </div>
 
   <p class="note">💡 आपकी कहानी हमारी टीम द्वारा पढ़ी जाएगी और चयन के बाद वेबसाइट पर प्रकाशित की जाएगी।</p>
 </body>
